@@ -4,12 +4,10 @@ import './ExpenseDate'
 import ExpenseDate from './ExpenseDate';
 import Card from "../UI/Card"
 const ExpenseItem = (props) => {
+  // eslint-disable-next-line 
   const [title,setTitle]=useState(props.title);
   const price=props.amount;
-  const clickHandler=()=>{
-    setTitle('updated');
-    console.log('clicked');
-  }
+ 
 
   return (
     <Card className="expense-item">
@@ -17,7 +15,6 @@ const ExpenseItem = (props) => {
       <div class="expense-item__description">
         <h2>{title}</h2>
         <div className="expense-item__price">${price}</div>
-        <button onClick={clickHandler}>add</button>
       </div>
     </Card>
   );
